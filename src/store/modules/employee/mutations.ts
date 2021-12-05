@@ -3,8 +3,11 @@ import { MutationTree } from "vuex";
 import { Employee } from "@/interfaces";
 
 const mutations: MutationTree<State> = {
+  updateEmployee(state: State, item: Partial<Employee>) {
+    state.employee = { ...state.employee, ...item };
+  },
   updateEmployees(state: State, employeeList: Employee[]) {
-    console.log("updateActivity", employeeList);
+    console.log("employees", employeeList);
     state.employeeList = employeeList;
   },
   removeEmployeeById(state: State, id) {
@@ -17,6 +20,15 @@ const mutations: MutationTree<State> = {
       },
       []
     );
+  },
+  resetEmployee(state: State) {
+    state.employee = {
+      _id: null,
+      firstName: "",
+      lastName: "",
+      startDate: null,
+      startDateCooperative: null,
+    };
   },
 };
 

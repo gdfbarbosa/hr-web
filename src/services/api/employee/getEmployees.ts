@@ -1,9 +1,9 @@
 import { getInstance } from "@/services";
 import { Employee } from "@/interfaces";
+import { AxiosResponse } from "axios";
 
 const request = async (): Promise<Employee | null> => {
-  let response = null;
-  response = await getInstance().get(`/employee`);
+  const response: AxiosResponse = await getInstance().get(`/employee`);
   if (!response) {
     return null;
   }

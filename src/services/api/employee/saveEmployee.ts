@@ -2,8 +2,11 @@ import { getInstance } from "@/services";
 import { Employee } from "@/interfaces";
 import { AxiosResponse } from "axios";
 
-const request = async (id: string): Promise<Employee | null> => {
-  const response: AxiosResponse = await getInstance().delete(`/employee/` + id);
+const request = async (employee: Employee): Promise<Employee | null> => {
+  const response: AxiosResponse = await getInstance().post(
+    `/employee`,
+    employee
+  );
   if (!response) {
     return null;
   }

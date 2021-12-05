@@ -12,3 +12,4 @@ export const getInstance = (): AxiosInstance => {
 
 export { default as getEmployees } from "./api/employee/getEmployees";
 export { default as deleteEmployee } from "./api/employee/deleteEmployee";
+export { default as saveEmployee } from "./api/employee/saveEmployee";

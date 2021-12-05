@@ -1,18 +1,19 @@
 <template>
-  <div>
+  <div id="app">
+    <v-container fluid style="height: 100vh">
+      <h1>Home</h1>
+    </v-container>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import HelloWorld from "@/components/HelloWorld.vue";
-// import HelloWorld from "../components/HelloWorld.vue";
+import { defineComponent } from "@vue/composition-api";
 
-export default Vue.extend({
+export default defineComponent({
   name: "Home",
-
-  components: {
-    // HelloWorld
-},
+  components: {},
+  setup() {
+    return {};
+  },
 });
 </script>

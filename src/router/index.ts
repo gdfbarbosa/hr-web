@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 
-import { Home, ListEmployee } from "@/views/";
+import { Home, ListEmployee, NewEmployee } from "@/views/";
 
 Vue.use(VueRouter);
 
@@ -14,10 +14,12 @@ const routes: Array<RouteConfig> = [
   {
     path: "/list-employee",
     name: "ListEmployee",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: ListEmployee,
+  },
+  {
+    path: "/new-employee",
+    name: "NewEmployee",
+    component: NewEmployee,
   },
 ];
 
@@ -27,4 +29,5 @@ const router = new VueRouter({
   routes,
 });
 
+export const useRouter = (): VueRouter => router;
 export default router;

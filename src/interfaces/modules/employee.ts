@@ -1,7 +1,7 @@
 export interface Employee {
-  _id: string;
+  _id: string | null;
   firstName: string;
   lastName: string;
-  birthDate: string;
-  gender: string;
+  startDate: Date | null;
+  startDateCooperative: Date | null;
 }

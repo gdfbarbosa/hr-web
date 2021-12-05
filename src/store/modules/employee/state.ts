@@ -11,8 +11,8 @@ const state: StateInterface = {
     _id: "",
     firstName: "",
     lastName: "",
-    gender: "",
-    birthDate: "",
+    startDate: null,
+    startDateCooperative: null,
   },
 };
 
